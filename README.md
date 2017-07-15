@@ -31,5 +31,6 @@ How to use:
 8. you should receive the message on the receiver serial window automatically
 
 Extras:
+- For a full list of included functions in the library, please refer to the .cpp and .h files.
 - You can also set the bitrate via the .set_speed(...) function. It must be a minimum of 500 bits/sec but no more than the laser slew rate. You will need to set the speed manually into both the transmitter and receiver codes. In a later version I plan to modify the code so that you only set the speed on the transmitter end and the receiver will automatically calculate the bitrate based on the interval between received bits.
 
