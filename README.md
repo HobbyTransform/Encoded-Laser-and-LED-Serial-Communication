@@ -6,7 +6,7 @@ This is an arduino library which enables you to use a simple laser or LED to tra
 - 2 x arduinos with USB cables
 - 2 x computers, one per arduino
 - male to male and male to female jumper leads
-- 1 x KY-008 laser module
+- 1 x KY-008 laser module or a visible light LED
 - 1 x laser sensor module, non-modulated
 - 1 x mini breadboard for photo-receiver / photodiode
 
