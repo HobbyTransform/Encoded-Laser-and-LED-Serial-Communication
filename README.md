@@ -1,6 +1,21 @@
 # Encoded-Laser-and-Infrared-Serial-Communication
 
-This is an arduino library which enables you to use a simple laser or LED to send characters between two arduinos (transmitter arduino with the laser to receiver arduino with a photodiode). The signal is encoded via hamming encoding (but not encrypted) to add some robustness to noise. The pin connection setup is explained in the example skethes included in the library. You will need two computers, one per arduino.
+This is an arduino library which enables you to use a simple laser or LED to send characters between two arduinos (transmitter arduino with the laser to receiver arduino with a photodiode). The pin connection setup is explained in the example skethes included in the library.
+
+How it works:
+1. The data is encoded via hamming encoding (but not encrypted) to add some robustness to noise
+2. it is then modulated via manchester modulation and sent via the laser or LED
+3. the received signal is manchester-demodulated
+4. the demodulated signal is then hamming decoded
+5. the data is then printed on the serial window
+
+What you need:
+- 2 x arduinos with USB cables
+- 2 x computers, one per arduino
+- male to male and male to female jumper leads
+- 1 x KY-008 laser module
+- 1 x laser sensor module
+- 1 x mini breadboard for photo-receiver / photodiode
 
 How to install:
 - download this library and add it to your libraries folder in the arduino folders on your computers
