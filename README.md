@@ -31,8 +31,8 @@ This is an arduino library which enables you to use a simple laser or LED to tra
 - the two encoded nibbles (now 8 bits each) are concatenated, least significant byte first to product a 16-bit integer
 ### 2. [Manchester Modulation](https://en.wikipedia.org/wiki/Manchester_code):
 - the 16-bit integer is then split into is least and most significant bytes
-- each byte is modulated via manchester modulation: 2 start bits to let the receiver know it is about to receive actual data and not just stray signals, then the byte followed by 1 stop bit, producing 11 bits. Each of those 11 bits is represented with two half-bits: first half-bit is the original XOR'ed with 1 and the second is XOR'ed with 0 instead. This produces 22 bits for each byte.
-- the pair of 22 bits are joined end on end producing 44 bits of data
+- each byte is modulated via manchester modulation: 2 start bits to let the receiver know it is about to receive actual data and not just stray signals, then the byte followed by 1 stop bit, producing 11 bits. Each of those 11 bits is represented with two half-bits: first half-bit is the original XOR'ed with 1 and the second is XOR'ed with 0 instead, this adds a clock pulse into the signal. This produces 22 bits for each byte.
+- the pair of 22 bits are joined end on end, least significant first, producing 44 bits of data
 ### 3. Transmission
 The 44-bit data is sent via the laser or LED, 1's are on and 0's are off
 ### 4. Manchester De-Modulation:
