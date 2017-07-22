@@ -24,12 +24,12 @@ This is an arduino library which enables you to use a simple laser or LED to tra
 8. you should receive the message on the receiver serial window automatically
 
 ## How it works:
-### 1. (7,4) Hamming Encoding:
+### 1. [Hamming(7,4) Encoding](https://en.wikipedia.org/wiki/Hamming(7,4)):
 - each byte of data (in ASCII: D7 D6 D5...D1 D0, e.g. D3 is 3rd digit of the byte) typed into the serial window is split into its most significant and least significant 4 bits, AKA nibbles: D7...D4 and D3...D0
-- each nibble is encoded via hamming encoding, producing an unsigned 8 bit integer. The extra 4 bits contain information about the original nibble to help detect errors and recover the original nibble in case some of the data was scrambled due to noise in the transmission. The encoding / decoding algorithm has its limits on how much unscrambling it can do but it is certainly more efficient than sending multiple times to improve accuracy. This encoding is as follows: y = x G, where x = (D0 D1 D2 D3) and G is a matrix producing y = (H0, H1, H2, D0, D1, D2, D3) and then we add an additional bit of even parity at the front y' = (P0, H0, H1, H2, D0, D1, D2, D3) where the parity bit P0 is just the XOR sum of the other bits.
+- each nibble is encoded via hamming encoding, producing an unsigned 8 bit integer. The extra 4 bits contain information about the original nibble to help detect errors and recover the original nibble in case some of the data was scrambled due to noise in the transmission. The encoding / decoding algorithm has its limits on how much unscrambling it can do but it is certainly more efficient than sending multiple times to improve accuracy. This encoding is as follows: y = x G, where x = (D0 D1 D2 D3) and G is a Hamming(7,4) matrix, producing y = (H0, H1, H2, D0, D1, D2, D3) and then we add an additional bit of even parity at the front y' = (P0, H0, H1, H2, D0, D1, D2, D3) where the parity bit P0 is just the XOR sum of the other bits.
 ![alt text](https://github.com/HobbyTransform/Encoded-Laser-and-LED-Serial-Communication/blob/master/(7%2C4)%20Hamming%20matrix.png)
 - the two encoded nibbles (now 8 bits each) are concatenated, least significant byte first to product a 16-bit integer
-### 2. Manchester Modulation:
+### 2. [Manchester Modulation](https://en.wikipedia.org/wiki/Manchester_code):
 - the 16-bit integer is then split into is least and most significant bytes
 - each byte is modulated via manchester modulation: 2 start bits to let the receiver know it is about to receive actual data and not just stray signals, then the byte followed by 1 stop bit, producing 11 bits. Each of those 11 bits is represented with two half-bits: first half-bit is the original XOR'ed with 1 and the second is XOR'ed with 0 instead. This produces 22 bits for each byte.
 - the pair of 22 bits are joined end on end producing 44 bits of data
