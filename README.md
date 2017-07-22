@@ -24,12 +24,18 @@ This is an arduino library which enables you to use a simple laser or LED to tra
 8. you should receive the message on the receiver serial window automatically
 
 ## How it works:
-1. Each byte of data typed into the serial window is encoded via hamming encoding, producing an unsigned 16 bit integer. The extra 8 bits contain information about the original byte to help detect errors and recover the original byte in case some of the data was scrambled due to noise in the transmission. The encoding / decoding algorithm has its limits on how much unscrambling it can do but it is certainly more efficient than sending multiple times to improve accuracy.
-2. the 16-bit integer is then modulated via manchester modulation, producing 44 bits of data (with half bits, start and stop bits etc.)
-3. the 44-bit data is sent via the laser or LED, 1's are on and 0's are off
-4. the 44-bit signal is received by the photo-detector and manchester-demodulated to reconstruct the 16-bit encoded signal
-5. the 16-bit demodulated signal is then hamming decoded to reproduce the original byte
-6. the byte is then printed on the serial window
+### 1. Hamming Encoding:
+Each byte of data typed into the serial window is encoded via hamming encoding, producing an unsigned 16 bit integer. The extra 8 bits contain information about the original byte to help detect errors and recover the original byte in case some of the data was scrambled due to noise in the transmission. The encoding / decoding algorithm has its limits on how much unscrambling it can do but it is certainly more efficient than sending multiple times to improve accuracy.
+### 2. Manchester Modulation:
+The 16-bit integer is then modulated via manchester modulation, producing 44 bits of data (with half bits, start and stop bits etc.)
+## 3. Transmission
+The 44-bit data is sent via the laser or LED, 1's are on and 0's are off
+## 4. Manchester De-Modulation:
+The 44-bit signal is received by the photo-detector and manchester-demodulated to reconstruct the 16-bit encoded signal
+## 5. Hamming Decoding:
+The 16-bit demodulated signal is then hamming decoded to reproduce the original byte
+## 6. Printing Message:
+The byte is then printed on the serial window
 
 ## Extras:
 - For a full list of included functions in the library, please refer to the .cpp and .h files.
