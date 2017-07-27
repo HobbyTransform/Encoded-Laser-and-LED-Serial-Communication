@@ -3,6 +3,7 @@
 This is an arduino library which enables you to use a simple laser or LED to transmit characters between two arduinos (transmitter arduino with the laser to receiver arduino with a photodiode). Each byte of data is encoded (but not encrypted) to add some robustness to noise during the transmission and then modulated. The pin connection setup is explained in the example skethes included in the library. I originally wrote this as part of a netduino robotics project for uni, but I've since modified it to work with an arduino.
 
 ## What you need:
+The materials can be found on eBay,
 - 2 x [arduinos with USB cables](https://rover.ebay.com/rover/1/711-53200-19255-0/1?icep_id=114&ipn=icep&toolid=20004&campid=5338102960&mpre=http%3A%2F%2Fwww.ebay.com%2Fitm%2FUNO-R3-MEGA328P-ATMEGA16U2-Development-board-for-Arduino-USB-Cable-TSUS%2F112271479914%3F_trksid%3Dp2045573.c100506.m3226%26_trkparms%3Daid%253D555014%2526algo%253DPL.DEFAULT%2526ao%253D1%2526asc%253D43550%2526meid%253Dacbccaeae4ac45e3b16bb8d5869da0c5%2526pid%253D100506%2526rk%253D1%2526rkt%253D1%2526)
 - 2 x computers, one per arduino
 - [male to male and male to female jumper leads](https://rover.ebay.com/rover/1/705-53470-19255-0/1?icep_id=114&ipn=icep&toolid=20004&campid=5338112046&mpre=http%3A%2F%2Fwww.ebay.com.au%2Fitm%2F120Pcs-Good-Male-to-Female-Dupont-Wire-Jumper-Cable-for-Arduino-Breadboard-11cm-%2F252548000949%3Fepid%3D2097112763%26hash%3Ditem3acd08acb5%3Ag%3Ai~EAAOSwLnBX35pi%23shpCntId)
