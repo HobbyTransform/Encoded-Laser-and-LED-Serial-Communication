@@ -3,12 +3,12 @@
 This is an arduino library which enables you to use a simple laser or LED to transmit characters between two arduinos (transmitter arduino with the laser to receiver arduino with a photodiode). Each byte of data is encoded (but not encrypted) to add some robustness to noise during the transmission and then modulated. The pin connection setup is explained in the example skethes included in the library. I originally wrote this as part of a netduino robotics project for uni, but I've since modified it to work with an arduino.
 
 ## What you need:
-- 2 x arduinos with USB cables
+- 2 x [arduinos with USB cables](https://rover.ebay.com/rover/1/711-53200-19255-0/1?icep_id=114&ipn=icep&toolid=20004&campid=5338102960&mpre=http%3A%2F%2Fwww.ebay.com%2Fitm%2FUNO-R3-MEGA328P-ATMEGA16U2-Development-board-for-Arduino-USB-Cable-TSUS%2F112271479914%3F_trksid%3Dp2045573.c100506.m3226%26_trkparms%3Daid%253D555014%2526algo%253DPL.DEFAULT%2526ao%253D1%2526asc%253D43550%2526meid%253Dacbccaeae4ac45e3b16bb8d5869da0c5%2526pid%253D100506%2526rk%253D1%2526rkt%253D1%2526)
 - 2 x computers, one per arduino
-- male to male and male to female jumper leads
-- 1 x KY-008 laser module or a visible light LED
-- 1 x laser sensor module, non-modulated
-- 1 x mini breadboard for photo-receiver / photodiode
+- [male to male and male to female jumper leads](https://rover.ebay.com/rover/1/705-53470-19255-0/1?icep_id=114&ipn=icep&toolid=20004&campid=5338112046&mpre=http%3A%2F%2Fwww.ebay.com.au%2Fitm%2F120Pcs-Good-Male-to-Female-Dupont-Wire-Jumper-Cable-for-Arduino-Breadboard-11cm-%2F252548000949%3Fepid%3D2097112763%26hash%3Ditem3acd08acb5%3Ag%3Ai~EAAOSwLnBX35pi%23shpCntId)
+- 1 x [KY-008 laser module](https://rover.ebay.com/rover/1/705-53470-19255-0/1?icep_id=114&ipn=icep&toolid=20004&campid=5338112046&mpre=http%3A%2F%2Fwww.ebay.com.au%2Fitm%2FKY-008-Laser-Transmitter-Module-for-Arduino-AVR-PIC-good-%2F201415041566%3Fhash%3Ditem2ee545a21e%3Ag%3AI5wAAOSwBP9UXYG3%23shpCntId) or a [visible light LED](https://rover.ebay.com/rover/1/705-53470-19255-0/1?icep_id=114&ipn=icep&toolid=20004&campid=5338112046&mpre=http%3A%2F%2Fwww.ebay.com.au%2Fitm%2FElectronic-Parts-Pack-KIT-for-ARDUINO-Component-Switch-Button-Resistors-%2F132007578550%3Fhash%3Ditem1ebc43cbb6%3Ag%3AL-cAAOSwo4pYL1w2%23shpCntId)
+- 1 x [laser sensor module, non-modulated](https://rover.ebay.com/rover/1/705-53470-19255-0/1?icep_id=114&ipn=icep&toolid=20004&campid=5338112046&mpre=http%3A%2F%2Fwww.ebay.com.au%2Fitm%2F1x-Laser-Sensor-Module-non-modulator-Tube-Laser-Receiver-Module-best-cheap-%2F261583750482%3Fhash%3Ditem3ce79b4552%3Ag%3A11kAAOSwPe1T~r0w%23shpCntId)
+- 1 x [mini breadboard](https://rover.ebay.com/rover/1/711-53200-19255-0/1?icep_id=114&ipn=icep&toolid=20004&campid=5338102960&mpre=http%3A%2F%2Fwww.ebay.com%2Fitm%2FSYB-170-Mini-Solderless-Breadboard-Breadboard-Prototype-Board-Tie-points-LOT-%2F401247725915%3Fvar%3D%26hash%3Ditem5d6c3a695b%3Am%3AmFh1UBVkUnl0y7LDGqkWIMQ) for photo-receiver / photodiode
 
 ## How to install:
 - download this library and add it to your libraries folder in the arduino folders on your computers
