@@ -18,11 +18,12 @@ The materials can be found on eBay,
 1. open the arduino application
 2. open File -> Examples -> HT_LumenWire and select either the photoreceiver or transmitter examples
 3. plug in the arduino and select the appropriate COM port, then upload the transmitter / receiver sketches to their respective arduinos
-4. connect the components as described in the sketches
-5. open the serial window (spyglass symbol in the IDE) on both computers
-6. point the laser or LED to the photodiode
-7. enter a character or phrase in the serial window on the computer doing the transmitting and press enter to send
-8. you should receive the message on the receiver serial window automatically
+4. connect the laser as follows: laser S pin to pin 6, - pin to ground
+5. connect the photodiode as follows: photodiode out pin to pin 7, power pins as normal
+6. open the serial window (spyglass symbol in the IDE) on both computers
+7. point the laser or LED to the photodiode
+8. enter a character or phrase in the serial window on the computer doing the transmitting and press enter to send
+9. you should receive the message on the receiver serial window automatically
 
 ## How it works:
 ### 1. [Hamming(7,4) Encoding](https://en.wikipedia.org/wiki/Hamming(7,4)):
