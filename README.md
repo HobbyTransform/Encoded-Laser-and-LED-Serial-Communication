@@ -1,6 +1,6 @@
 # Encoded-Laser-and-Infrared-Serial-Communication
 
-This is an arduino library which enables you to use a simple laser or LED to transmit characters between two arduinos (transmitter arduino with the laser to receiver arduino with a photodiode). Each byte of data is encoded (but not encrypted) to add some robustness to noise during the transmission and then modulated. The pin connection setup is explained in the example skethes included in the library. I originally wrote this as part of a netduino robotics project for uni, but I've since modified it to work with an arduino.
+This is an arduino library which enables you to use a simple laser or LED to transmit characters between two arduinos (transmitter arduino with the laser to receiver arduino with a photodiode). Each byte of data is encoded (but not encrypted) to add some robustness to noise during the transmission and then modulated. The pin connection setup is explained in the example skethes included in the library. I originally wrote this as part of a netduino robotics project for uni, but I've since modified it to work with an arduino. It took a lot of work but I'd like to share this valuable resource with you, if you would like to support my work please consider donating ([https://www.paypal.me/HobbyTransform](https://www.paypal.me/HobbyTransform)) or purchasing the material for your project through the ebay affiliate links to help fund other similar projects.
 
 ## What you need:
 The materials can be found on eBay,
